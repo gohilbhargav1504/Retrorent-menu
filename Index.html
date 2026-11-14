@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#4b101d">
+<title>[WRITE CAFE NAME HERE] | Menu</title>
+<style>
+:root{--wine:#4b101d;--wine2:#2b0911;--gold:#e7bd62;--cream:#fff5df;--muted:#d8c5ad;--line:#75404a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:125px}
+body{margin:0;background:linear-gradient(145deg,#21070d,#4b101d 55%,#2b0911);color:var(--cream);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{padding:25px 16px 20px;text-align:center;border-bottom:1px solid var(--line);background:linear-gradient(120deg,#5b1424,#310912)}
+.brand{margin:0;color:var(--gold);font-family:Georgia,serif;font-size:clamp(26px,7vw,42px);letter-spacing:.04em}
+.sub{margin:7px 0 0;color:var(--muted);font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+.sticky{position:sticky;top:0;z-index:5;background:#2b0911ed;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 12px}
+.search{display:block;width:100%;max-width:760px;margin:0 auto 9px;padding:12px 14px;border-radius:10px;border:1px solid #93636a;background:#fff8eb;color:#2b0911;font-size:16px;outline:none}
+.search:focus{border-color:var(--gold);box-shadow:0 0 0 2px #e7bd6233}
+.tabs{display:flex;gap:8px;overflow-x:auto;max-width:900px;margin:auto;padding-bottom:2px;scrollbar-width:thin}
+.tabs a{white-space:nowrap;text-decoration:none;color:var(--cream);border:1px solid #8c5962;border-radius:999px;padding:8px 12px;font-size:13px}
+.tabs a:hover,.tabs a:focus{background:var(--gold);color:#2b0911;border-color:var(--gold)}
+main{width:min(940px,100%);margin:auto;padding:18px 12px 50px}
+section{margin:0 0 22px;scroll-margin-top:130px}
+.section-title{margin:0 0 10px;padding:12px 14px;background:linear-gradient(90deg,#e7bd62,#c9953d);color:#2b0911;border-radius:10px;font:700 18px Georgia,serif;letter-spacing:.04em}
+.section-note{font-size:12px;color:var(--muted);margin:0 0 9px}
+.menu-card{border:1px solid #71414a;border-radius:12px;overflow:hidden;background:#3a0c17b8}
+.table-head,.dish{display:grid;grid-template-columns:minmax(0,1fr) repeat(var(--cols), minmax(54px,75px));gap:6px;align-items:center;padding:10px 12px}
+.table-head{background:#26070e;color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.dish{border-top:1px solid #63323d;font-size:14px}
+.dish:nth-child(odd){background:#ffffff08}
+.name{font-weight:600;overflow-wrap:anywhere}
+.price{text-align:right;font-variant-numeric:tabular-nums;color:#ffe0a0;font-weight:700;white-space:nowrap}
+.empty{color:#947d7e}
+.single .table-head,.single .dish{grid-template-columns:minmax(0,1fr) 76px}
+.no-results{display:none;padding:18px;text-align:center;color:var(--muted)}
+.unclear{border:1px dashed #d6a84e;border-radius:10px;padding:12px 14px;color:#ffe7b5;background:#2c0a12}
+.unclear h3{margin:0 0 6px;color:var(--gold);font-size:15px}
+.unclear ul{margin:6px 0 0;padding-left:20px}
+footer{text-align:center;color:#bda5a0;font-size:12px;padding:10px 16px 28px}
+@media(min-width:650px){main{padding-top:24px}.dish{font-size:15px;padding:12px 16px}.table-head{padding:11px 16px}}
+</style>
+</head>
+<body>
+<header>
+  <h1 class="brand">[WRITE CAFE NAME HERE]</h1>
+  <p class="sub">Food Menu</p>
+</header>
+<div class="sticky">
+  <input id="search" class="search" type="search" placeholder="Search dishes..." aria-label="Search dishes">
+  <nav class="tabs" aria-label="Menu sections">
+    <a href="#specialities">Gosht Specialities</a>
+    <a href="#gosht">Aaf-e-Gosht</a>
+    <a href="#moti">Aab-e-Moti</a>
+  </nav>
+</div>
+<main>
+<section id="specialities">
+  <h2 class="section-title">AAF-E-GOSHT SPECIALITIES</h2>
+  <p class="section-note">The photo shows two prices per dish; column headings are not visible.</p>
+  <div class="menu-card" data-menu style="--cols:2">
+    <div class="table-head"><span>Dish</span><span style="text-align:right">Price 1</span><span style="text-align:right">Price 2</span></div>
+    <div class="dish"><span class="name">Mutton Saman Special</span><span class="price">₹490</span><span class="price">₹340</span></div>
+    <div class="dish"><span class="name">Mutton Badami</span><span class="price">₹490</span><span class="price">₹340</span></div>
+    <div class="dish"><span class="name">Mutton Beshoni</span><span class="price">₹490</span><span class="price">₹340</span></div>
+    <div class="dish"><span class="name">Dal Gosht</span><span class="price">₹440</span><span class="price">₹330</span></div>
+    <div class="dish"><span class="name">Mutton Angaaray</span><span class="price">₹490</span><span class="price">₹340</span></div>
+    <div class="dish"><span class="name">Mutton Dhingana</span><span class="price">₹490</span><span class="price">₹340</span></div>
+    <div class="dish"><span class="name">Mutton Chashmeshahi</span><span class="price">₹490</span><span class="price">₹340</span></div>
+    <div class="dish"><span class="name">Mutton Nawabi Koorma</span><span class="price">₹490</span><span class="price">₹340</span></div>
+    <div class="dish"><span class="name">Mutton Kalimiri</span><span class="price">₹490</span><span class="price">₹340</span></div>
+    <div class="dish"><span class="name">Mutton Junglee</span><span class="price">₹490</span><span class="price">₹340</span></div>
+    <div class="dish"><span class="name">Mutton Takatak</span><span class="price">₹490</span><span class="price">₹340</span></div>
+    <div class="dish"><span class="name">Mutton Chettinad</span><span class="price">₹490</span><span class="price">₹340</span></div>
+  </div>
+</section>
+
+<section id="gosht">
+  <h2 class="section-title">AAF-E-GOSHT</h2>
+  <div class="menu-card" data-menu style="--cols:3">
+    <div class="table-head"><span>Dish</span><span style="text-align:right">Full</span><span style="text-align:right">Half</span><span style="text-align:right">P.P.</span></div>
+    <div class="dish"><span class="name">Bara Gosht</span><span class="price">₹440</span><span class="price">₹330</span><span class="price">₹240</span></div>
+    <div class="dish"><span class="name">Gosht Baidha Pasanda</span><span class="price">₹440</span><span class="price">₹330</span><span class="price">₹240</span></div>
+    <div class="dish"><span class="name">Mutton Rogan Josh</span><span class="price">₹440</span><span class="price">₹330</span><span class="price">₹240</span></div>
+    <div class="dish"><span class="name">Mutton Mughlai</span><span class="price">₹440</span><span class="price">₹330</span><span class="price">₹240</span></div>
+    <div class="dish"><span class="name">Mutton Kadai</span><span class="price">₹440</span><span class="price">₹330</span><span class="price">₹240</span></div>
+    <div class="dish"><span class="name">Tawa Gosh</span><span class="price">₹440</span><span class="price">₹330</span><span class="price">₹240</span></div>
+    <div class="dish"><span class="name">Kacchi Mirchi Ka Gosht</span><span class="price">₹440</span><span class="price">₹330</span><span class="price">₹240</span></div>
+    <div class="dish"><span class="name">Mutton Kolhapuri</span><span class="price">₹440</span><span class="price">₹330</span><span class="price">₹240</span></div>
+    <div class="dish"><span class="name">Mutton - Do - Pyaza</span><span class="price">₹440</span><span class="price">₹330</span><span class="price">₹240</span></div>
+    <div class="dish"><span class="name">Mutton Handi</span><span class="price">₹430</span><span class="price">₹310</span><span class="price empty">—</span></div>
+    <div class="dish"><span class="name">Patela Shahi Gosht</span><span class="price empty">—</span><span class="price empty">—</span><span class="price">₹260</span></div>
+    <div class="dish"><span class="name">Mutton Afghani</span><span class="price empty">—</span><span class="price empty">—</span><span class="price">₹260</span></div>
+    <div class="dish"><span class="name">Mutton-Bind-Alu</span><span class="price empty">—</span><span class="price empty">—</span><span class="price">₹260</span></div>
+    <div class="dish"><span class="name">Mutton Kheema</span><span class="price empty">—</span><span class="price empty">—</span><span class="price">₹220</span></div>
+    <div class="dish"><span class="name">Mutton Bhuna</span><span class="price empty">—</span><span class="price empty">—</span><span class="price">₹250</span></div>
+    <div class="dish"><span class="name">Aachar Gosht</span><span class="price empty">—</span><span class="price empty">—</span><span class="price">₹250</span></div>
+    <div class="dish"><span class="name">Mutton Masala</span><span class="price empty">—</span><span class="price empty">—</span><span class="price">₹240</span></div>
+    <div class="dish"><span class="name">Mutton Seekh Kabab Masala</span><span class="price empty">—</span><span class="price empty">—</span><span class="price">₹300</span></div>
+  </div>
+</section>
+
+<section id="moti">
+  <h2 class="section-title">AAB-E-MOTI</h2>
+  <div class="menu-card single" data-menu style="--cols:1">
+    <div class="table-head"><span>Dish</span><span style="text-align:right">Price</span></div>
+    <div class="dish"><span class="name">Fish Finger</span><span class="price">₹280</span></div>
+    <div class="dish"><span class="name">Tandoor Pomfret</span><span class="price">₹320</span></div>
+    <div class="dish"><span class="name">Hyderabadi Pomfret</span><span class="price">₹320</span></div>
+    <div class="dish"><span class="name">Surmai Tawa Fried (Per Piece)</span><span class="price">₹310</span></div>
+    <div class="dish"><span class="name">Fish Tikka Malwani (Boneless - 7ps)</span><span class="price">₹280</span></div>
+    <div class="dish"><span class="name">Fried Pomfret</span><span class="price">₹320</span></div>
+    <div class="dish"><span class="name">Rawas Tawa Fry</span><span class="price">₹300</span></div>
+    <div class="dish"><span class="name">Fish Koliwada</span><span class="price">₹300</span></div>
+    <div class="dish"><span class="name">Pepper Prawns</span><span class="price">₹310</span></div>
+    <div class="dish"><span class="name">Garlic Prawns</span><span class="price">₹330</span></div>
+    <div class="dish"><span class="name">Prawns Koliwada (Dry)</span><span class="price">₹300</span></div>
+    <div class="dish"><span class="name">Golden Prawns (Dry)</span><span class="price">₹300</span></div>
+    <div class="dish"><span class="name">Fish Hyderabadi (Gravy / Tandoori)</span><span class="price">₹330</span></div>
+    <div class="dish"><span class="name">Surmai Masala / Curry</span><span class="price">₹330</span></div>
+    <div class="dish"><span class="name">Fish Goan Masala / Curry (Rawas)</span><span class="price">₹280</span></div>
+    <div class="dish"><span class="name">Pompret Goan Masala / Curry</span><span class="price">₹320</span></div>
+    <div class="dish"><span class="name">Pompret Malvani Curry</span><span class="price">₹330</span></div>
+    <div class="dish"><span class="name">Tawa Fish</span><span class="price">₹330</span></div>
+    <div class="dish"><span class="name">Fish Amrutsari Rawas</span><span class="price">₹290</span></div>
+    <div class="dish"><span class="name">Fish Chilly (Chinese / Indian)</span><span class="price">₹280</span></div>
+    <div class="dish"><span class="name">Prawns Schezwan</span><span class="price">₹310</span></div>
+    <div class="dish"><span class="name">Prawns in Hot Garlic Sauce</span><span class="price">₹310</span></div>
+    <div class="dish"><span class="name">Prawns Masala Dry</span><span class="price">₹310</span></div>
+    <div class="dish"><span class="name">Prawns Masala</span><span class="price">₹310</span></div>
+    <div class="dish"><span class="name">Prawns Curry</span><span class="price">₹310</span></div>
+    <div class="dish"><span class="name">Prawns Kadai</span><span class="price">₹380</span></div>
+    <div class="dish"><span class="name">Prawns Tawa</span><span class="price">₹380</span></div>
+    <div class="dish"><span class="name">Prawns Malwani Curry</span><span class="price">₹320</span></div>
+  </div>
+</section>
+
+<section class="unclear" id="unclear">
+  <h3>Items unclear in the supplied photo</h3>
+  <ul>
+    <li>One or more dish names immediately below “Mutton Masala” are hidden by the image-search overlay; their names and prices cannot be read reliably.</li>
+    <li>A further partially covered line appears to contain “... (Mutton) Masala” with a visible price of ₹250, but the full dish name is not clear enough to transcribe confidently.</li>
+  </ul>
+</section>
+<div class="no-results" id="noResults">No dishes match your search.</div>
+</main>
+<footer>Prices are transcribed from the supplied menu photo. Please confirm any unclear items with the restaurant.</footer>
+<script>
+const search = document.getElementById('search');
+const dishes = [...document.querySelectorAll('.dish')];
+const noResults = document.getElementById('noResults');
+search.addEventListener('input', () => {
+  const q = search.value.trim().toLocaleLowerCase();
+  let shown = 0;
+  dishes.forEach(row => {
+    const match = row.textContent.toLocaleLowerCase().includes(q);
+    row.hidden = !match;
+    if (match) shown++;
+  });
+  document.querySelectorAll('section[id]').forEach(section => {
+    const rows = [...section.querySelectorAll('.dish')];
+    if (rows.length) section.hidden = rows.every(row => row.hidden);
+  });
+  noResults.style.display = shown ? 'none' : 'block';
+  if (!q) document.querySelectorAll('section[id]').forEach(section => section.hidden = false);
+});
+</script>
+</body>
+</html>
